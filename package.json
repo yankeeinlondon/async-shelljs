@@ -1,6 +1,6 @@
 {
   "name": "async-shelljs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "async-shelljs",
   "license": "MIT",
   "repository": "https://github.com/ksnyde/async-shelljs",

@@ -1,5 +1,4 @@
-import { ExecOptions } from "child_process";
-import { exec } from "shelljs";
+import { exec, ExecOptions } from "shelljs";
 
 export {
   cat,
@@ -36,14 +35,19 @@ export {
   ShellReturnValue
 } from "shelljs";
 
+export interface IExecFunctionOptions extends ExecOptions {
+  silent?: boolean;
+  async?: false;
+}
+
 export function asyncExec(
   command: string,
-  options: ExecOptions = {}
+  options: IExecFunctionOptions = {}
 ): Promise<string> {
   return new Promise((resolve, reject) => {
     exec(
       command,
-      { async: false, ...options },
+      { ...options, async: false },
       (code: number, stdout: string, stderr: string) => {
         if (code !== 0) {
           const e: Error = new Error();
