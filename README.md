@@ -4,4 +4,4 @@
 
 # Async ShellJS
 
-[ShellJS](http://documentup.com/shelljs) is a great library for interacting with OS shell environments within node. Now that all modern versions of NodeJS support promises and many people are leveraging the async/await design pattern.
+[ShellJS](https://github.com/shelljs/shelljs) [[docs](http://shelljs.org)] is a great library for interacting with OS shell environments within node. Now that all modern versions of NodeJS support promises and many people are leveraging the async/await design pattern.
